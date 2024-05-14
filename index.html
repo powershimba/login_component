@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <a href="login.html" id="loginLink"><alt="Login"></a>
+        <a href="signup.html" id="signupLink"><alt="Sign Up></a>
+        <a href="mypage.html" id="myPageLink" style="display:none;"><img src="mypage-icon.png" alt="My Page"></a>
+    </div>
+
+    <div class="container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password" onkeydown="checkEnter(event)">
+        <button onclick="login()">Login</button>
+        <p>
+            <a href="signup.html">Sign Up</a>
+        </p>
+    </div>
+    <script src="src/login.js"></script>
+    <script src="src/chatbot.js"></script>
+
+    <div class="chatbot-button-container">
+        <button id="chatbotButton">Chat with Us</button>
+    </div>
+
+    <div id="chatbotDialog" style="display:none;">
+        <div class="chatbot-content">
+            <h2>Chatbot</h2>
+            <p>Welcome to our chat service. Ask me about job salaries or for job search recommendations!</p>
+            <!-- Chat content goes here -->
+        </div>
+    </div>
+
+    
+</body>
+</html>
+

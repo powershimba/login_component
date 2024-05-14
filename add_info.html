@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add User Information</h1>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="job" placeholder="Job">
+        <input type="number" id="salary" placeholder="Salary">
+        <button class="button-yellow" onclick="addUserInfo()">Add User Info</button>
+        <div id="userInfoDisplay"></div>
+        <!-- Navigation buttons -->
+        <button onclick="window.location.href='admin.html'">Admin</button>
+        <button onclick="window.location.href='mypage.html'">My Page</button>
+        <a href="#" onclick="logout()" class="text-link">Logout</a> 
+    </div>
+
+    <script src="src/add_info.js"></script>
+</body>
+</html>
