@@ -15,7 +15,6 @@ function updatePassword() {
 }
 
 function displayUserInfo() {
-    const user = JSON.parse(sessionStorage.getItem('user'));
     const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '{}');
     const userInfoSection = document.getElementById('userInfoSection');
     
@@ -41,5 +40,4 @@ function updateUserInfo() {
     sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
     
     alert("User information updated successfully.");
-    // Also update the user information on the admin page
 }

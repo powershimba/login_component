@@ -19,7 +19,19 @@ function addUserInfo() {
         job: job,
         salary: salary
     };
-    sessionStorage.setItem('userInfo', JSON.stringify(userInfo)); // Save updated user info
+
+    // Retrieve the existing 'userInfo' from sessionStorage and parse it as JSON
+    let users = JSON.parse(sessionStorage.getItem('userInfo') || '[]');
+    console.log("Retrieved users:", users);
+
+    // Add the new userInfo to the array
+    users.push(userInfo);
+
+    // Save the updated array back to sessionStorage in string format
+    sessionStorage.setItem('userInfo', JSON.stringify(users));
+    console.log("Updated users:", users);
+
+    // Assuming displayUserInfo is defined elsewhere and handles displaying user info
     displayUserInfo(userInfo);
 }
 
